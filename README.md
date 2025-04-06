@@ -6,6 +6,9 @@
 | Nombre | Cédula | Programa Académico |
 |--------|--------|--------------------|
 | Cesar Augusto Ruíz Parra | 1088027228| Bioingeniería |
+| Paula Valentina Pinzón Gómez | 1007423535| Bioingeniería |
+| Mauro Andrés Alegría Cano| 1002972153| Bioingeniería |
+
 
 ## Descripción del Proyecto
 
