@@ -1,0 +1,2 @@
+timestamp,tipo_modelo,accuracy_cv,tiempo_entrenamiento_seg,tiempo_prediccion_seg,n_iteraciones,cv_folds,mejores_parametros
+20250613_081510,Random Forest Súper Ligero,0.39175120589332857,57.39965271949768,1.9974818229675293,5,2,"{'rf__n_estimators': 100, 'rf__min_samples_split': 5, 'rf__min_samples_leaf': 4, 'rf__max_features': 'sqrt', 'rf__max_depth': 20, 'rf__class_weight': 'balanced', 'rf__bootstrap': False}"
