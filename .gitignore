@@ -174,4 +174,6 @@ cython_debug/
 .pypirc
 
 /Data
-/Resultados_Modelos
+/Resultados_Modelos/*
+/Resultados_Modelos/RaandomForest/*
+/Resultados_Modelos/RaandomForest/Ligero_2023-10-16_11-30-00/*

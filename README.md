@@ -83,3 +83,84 @@ Todo el proceso de preprocesamiento está implementado en el notebook **02 - pre
 
 ## Video de Avance del Proyecto
 - https://youtu.be/EDLIb-78314
+
+
+# [Entrega #3] Modelado Avanzado con Machine Learning
+
+## Descripción
+En esta entrega desarrollamos e implementamos modelos avanzados de Machine Learning para la predicción del rendimiento académico, enfocándonos en algoritmos de alto rendimiento como SVM, Random Forest y XGBoost. El objetivo es lograr la mayor precisión posible aprovechando técnicas de modelado avanzadas y optimización de hiperparámetros.
+
+## Modelos Implementados
+
+### 1. Modelo SVM (03 - modelo SVM.ipynb)
+**Support Vector Machine** - Modelo de clasificación basado en la búsqueda del hiperplano óptimo
+- **Kernel utilizado**: RBF (Radial Basis Function) para capturar relaciones no lineales
+- **Optimización**: Búsqueda en grilla para parámetros C y gamma
+- **Características**: Manejo robusto de datos de alta dimensionalidad
+- **Ventajas**: Efectivo con espacios de características complejos
+- **Resultados**: Modelo baseline con buena generalización
+
+### 2. Modelo Random Forest (04 - modelo Random Forest.ipynb)
+**Ensemble de Árboles de Decisión** - Técnica de bagging para reducir overfitting
+- **Algoritmo**: Combinación de múltiples árboles de decisión
+- **Optimización**: Búsqueda exhaustiva de hiperparámetros (n_estimators, max_depth, min_samples_split)
+- **Características**: 
+  - Importancia automática de características
+  - Resistencia al overfitting
+  - Manejo natural de variables categóricas y numéricas
+- **Ventajas**: Interpretabilidad y robustez
+- **Resultados**: Mejora significativa sobre SVM con análisis de importancia de características
+
+### 3. Modelo XGBoost (05 - modelo solución.ipynb)
+**Extreme Gradient Boosting** - Algoritmo de boosting optimizado para competencias
+- **Algoritmo**: Gradient boosting con optimizaciones avanzadas
+- **Aceleración GPU**: Implementación con soporte CUDA para RTX 4070
+- **Optimización avanzada**: 
+  - RandomizedSearchCV con 50+ iteraciones
+  - Validación cruzada estratificada
+  - Early stopping para prevenir overfitting
+- **Características técnicas**:
+  - `tree_method='gpu_hist'` para aceleración GPU
+  - Regularización L1 y L2
+  - Control de profundidad y learning rate adaptativo
+- **Ventajas**: 
+  - Estado del arte en datos tabulares
+  - Excelente manejo de características categóricas
+  - Optimización automática de memoria
+- **Resultados**: Mejor modelo final con accuracy superior y análisis detallado
+
+## Infraestructura y Hardware
+- **CPU**: Intel i7 12va generación
+- **GPU**: NVIDIA RTX 4070 (utilizada para XGBoost)
+- **Memoria**: Optimización para datasets grandes
+- **Paralelización**: Aprovechamiento de múltiples cores
+
+## Metodología de Evaluación
+- **Validación cruzada**: 5-fold stratified para todos los modelos
+- **Métricas**: Accuracy como métrica principal
+- **Análisis de confianza**: Distribución de probabilidades de predicción
+- **Importancia de características**: Análisis detallado para interpretabilidad
+- **Comparación robusta**: Evaluación de tiempo de entrenamiento y uso de GPU
+
+## Resultados y Submissions
+Cada modelo genera archivos completos de resultados:
+- **Modelo entrenado**: `.joblib` para reutilización
+- **Submission**: Archivo CSV para Kaggle
+- **Probabilidades**: Análisis de confianza de predicciones
+- **Métricas**: Resultados detallados de validación cruzada
+- **Importancia**: Ranking de características más relevantes
+
+## Flujo de Trabajo
+1. **Carga de datos preprocesados** (de la Entrega #2)
+2. **Configuración de hardware** (GPU, cores, memoria)
+3. **Definición de hiperparámetros** específicos por modelo
+4. **Entrenamiento con validación cruzada**
+5. **Optimización de hiperparámetros**
+6. **Evaluación final y análisis**
+7. **Generación de submissions**
+8. **Comparación de modelos**
+
+El modelo XGBoost emerge como la **solución final** debido a su superior rendimiento, eficiencia computacional y capacidad de generalización en datos tabulares complejos.
+
+
+
